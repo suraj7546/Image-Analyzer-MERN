@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import FormData from "form-data";
+import Axios from "axios";
+import { useState } from "react";
 function App() {
+  const [file, setFile] = useState(null);
+  const upload = (e) => {
+    e.preventDefault();
+    let formData = new FormData();
+    formData.append("ss", file);
+    Axios.post("http://localhost:8000/", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }).then((res) => {
+      console.log("Success ", res);
+    });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input
+        type="file"
+        name="screenshot"
+        onChange={(e) => {
+          setFile(e.target.files[0]);
+        }}
+      />
+      <button onClick={(e) => upload(e)}>Submit</button>
     </div>
   );
 }
