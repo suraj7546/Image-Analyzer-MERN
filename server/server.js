@@ -10,21 +10,16 @@ app.use(fileUpload());
 
 app.post("/", async (req, res) => {
   const file = await req.files.ss;
-  const fileName = Date.now() + "_" + file.name;
-  let uploadPath = __dirname + "/uploads/" + fileName;
-  file.mv(uploadPath, (err) => {
-    if (err) {
-      return res.send(err);
-    }
-  });
-
-  // console.log(fileName.ss.name);
+  console.log(file);
+  // const fileName = Date.now() + "_" + file.name;
+  // let uploadPath = __dirname + "/uploads/" + fileName;
+  // file.mv(uploadPath, (err) => {
+  //   if (err) {
+  //     return res.send(err);
+  //   }
+  // });
   res.send("sa");
 });
-// app.get("/", async (req, res) => {
-//   const fileName = res.files;
-//   res.send("as");
-// });
 
 app.listen(port, (err) => {
   if (err) {

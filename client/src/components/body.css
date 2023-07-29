@@ -1,0 +1,9 @@
+.body{
+    height:20rem;
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 20rem 1fr 1fr 20rem;
+}
+.left{
+    grid-column: 2/3;
+}

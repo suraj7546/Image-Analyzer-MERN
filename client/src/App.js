@@ -1,32 +1,27 @@
-import FormData from "form-data";
-import Axios from "axios";
+import React from "react";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar.js";
+import Body from "./components/Body.js";
+import Footer1 from "./components/Footer1.js";
 import { useState } from "react";
-function App() {
+const App = () => {
   const [file, setFile] = useState(null);
-  const upload = (e) => {
-    e.preventDefault();
-    let formData = new FormData();
-    formData.append("ss", file);
-    Axios.post("http://localhost:8000/", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }).then((res) => {
-      console.log("Success ", res);
-    });
+
+  const handleFileChange = (selectedFile) => {
+    setFile(selectedFile);
   };
+
   return (
-    <div className="App">
-      <input
-        type="file"
-        name="screenshot"
-        onChange={(e) => {
-          setFile(e.target.files[0]);
-        }}
-      />
-      <button onClick={(e) => upload(e)}>Submit</button>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Body image={file} />
+      <Routes>
+        <Route path="/about" element={"as"} />
+      </Routes>
+      <Footer1 onFileChange={handleFileChange} />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
