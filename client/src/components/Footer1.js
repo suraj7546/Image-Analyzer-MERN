@@ -1,23 +1,27 @@
-import React from "react";
-import FormData from "form-data";
+import React, { useState } from "react";
 import Axios from "axios";
-import { useState } from "react";
-const Footer1 = ({ onFileChange }) => {
+
+const Footer1 = ({ onFileChange, fetchData }) => {
   const [file, setFile] = useState(null);
 
-  const upload = (e) => {
+  const upload = async (e) => {
     e.preventDefault();
     onFileChange(file);
+    fetchData();
     let formData = new FormData();
     formData.append("ss", file);
-    Axios.post("http://localhost:8000/", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }).then((res) => {
-      console.log("Success ", res);
-    });
+    try {
+      const response = await Axios.post("http://localhost:8000/", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      console.log("Success ", response);
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
   };
+
   return (
     <>
       <div className="footer">
@@ -28,13 +32,7 @@ const Footer1 = ({ onFileChange }) => {
             setFile(e.target.files[0]);
           }}
         ></input>
-        <button
-          onClick={(e) => {
-            upload(e);
-          }}
-        >
-          upload
-        </button>
+        <button onClick={(e) => upload(e)}>upload</button>
       </div>
     </>
   );

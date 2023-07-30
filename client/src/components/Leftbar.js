@@ -18,7 +18,7 @@ const Leftbar = ({ image }) => {
         alt="Uploaded Image"
         style={{ maxWidth: "100%" }}
       />
-      <div>left bar :{console.log(image)}</div>
+      <div>left bar </div>
     </>
   );
 };

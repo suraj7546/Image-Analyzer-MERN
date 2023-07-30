@@ -9,16 +9,16 @@ const Navbar = () => {
         <div className="list">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>a
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">about</NavLink>b
+              <NavLink to="/about">about</NavLink>
             </li>
             <li>
-              <NavLink to="/service">services</NavLink>c
+              <NavLink to="/service">services</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">contact</NavLink>d
+              <NavLink to="/contact">contact</NavLink>
             </li>
           </ul>
         </div>

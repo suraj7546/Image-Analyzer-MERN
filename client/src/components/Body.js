@@ -2,7 +2,7 @@ import React from "react";
 import Leftbar from "./Leftbar";
 import Rightbar from "./Rightbar";
 import "./body.css";
-const Body = ({ image }) => {
+const Body = ({ image, data }) => {
   return (
     <>
       <div className="body">
@@ -10,7 +10,7 @@ const Body = ({ image }) => {
           <Leftbar image={image} />
         </div>
         <div className="right">
-          <Rightbar />
+          <Rightbar data={data} />
         </div>
       </div>
     </>
