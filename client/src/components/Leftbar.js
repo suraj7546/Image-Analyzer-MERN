@@ -1,4 +1,5 @@
 import React from "react";
+import "./leftbar.css";
 
 const Leftbar = ({ image }) => {
   if (
@@ -9,16 +10,24 @@ const Leftbar = ({ image }) => {
       image instanceof MediaSource
     )
   ) {
-    return <div>No image available.</div>;
+    return (
+      <div className="image-box">
+        <img
+          className="image"
+          src="https://1.bp.blogspot.com/-Vd7e0FNcm-k/Xv7j8YIYRAI/AAAAAAAAAvE/B1R-kuAPlnopbLr6XhgViREGIQ2nx_i2wCLcBGAsYHQ/s1600/Preview%2BImage%2BBefore%2BUpload%2Bin%2BHTML%2BCSS%2B%2526%2BJavaScript.webp"
+        />
+      </div>
+    );
   }
   return (
     <>
-      <img
-        src={URL.createObjectURL(image)}
-        alt="Uploaded Image"
-        style={{ maxWidth: "100%" }}
-      />
-      <div>left bar </div>
+      <div className="image-box">
+        <img
+          className="image"
+          src={URL.createObjectURL(image)}
+          alt="Uploaded Image"
+        />
+      </div>
     </>
   );
 };

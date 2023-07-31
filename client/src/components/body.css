@@ -1,6 +1,6 @@
 .body{
-    height:20rem;
-    background-color: blanchedalmond;
+    height: 33rem;
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 20rem 1fr 1fr 20rem;
 }

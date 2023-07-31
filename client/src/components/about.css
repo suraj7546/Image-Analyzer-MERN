@@ -1,0 +1,63 @@
+.object-box{
+    height: 338px;
+    width: 450px;
+    box-shadow: 1px;
+    background-size: cover;
+    box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
+    overflow-y: scroll;
+    padding: 5px;
+    color: #4285f4;
+    font-size: 1.5rem;
+    font-weight: 500;
+  
+}
+
+
+.row{
+    margin: 12px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.name{
+
+    width: 300px;
+    text-transform: capitalize;
+    
+}
+.score{
+    
+    padding-left: 5rem;
+}
+/* Add your other CSS styles for the object-box, row, name, score here */
+
+/* CSS for the meter */
+.meter {
+    width: 95%;
+    height: 4px;
+    background-color: #e0e0e0; /* Gray background */
+    position: relative;
+    margin-top: 5px;
+  }
+  
+  .meter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4caf50; /* Green color for the progress bar */
+    animation: fillMeter 1s ease forwards; /* Use the keyframe animation */
+  }
+  
+  /* Keyframe animation for the progress bar */
+  @keyframes fillMeter {
+    0% {
+      width: 0; /* Start with 0% width */
+    }
+    100% {
+      width: calc(var(--confidence) * 100%); /* Fill up to the confidence percentage */
+    }
+  }
+  

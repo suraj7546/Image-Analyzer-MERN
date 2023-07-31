@@ -8,6 +8,7 @@ import Rightbar from "./components/Rightbar";
 const App = () => {
   const [file, setFile] = useState(null);
   const [nData, setNData] = useState(null);
+  const [colors, setColors] = useState(null);
 
   const handleFileChange = (selectedFile) => {
     setFile(selectedFile);
@@ -19,23 +20,32 @@ const App = () => {
       const response = await fetch("http://localhost:8000/get-json");
       const data = await response.json();
       setNData(data); // Update the state with the fetched data
+      // console.log(nData);
+    } catch (error) {
+      console.error("Error fetching JSON data:", error);
+    }
+  };
+  const color = async () => {
+    try {
+      // Make a GET request to the server to fetch the JSON data
+      const response = await fetch("http://localhost:8000/get-color-json");
+      const data = await response.json();
+      setColors(data); // Update the state with the  data
     } catch (error) {
       console.error("Error fetching JSON data:", error);
     }
   };
 
-  // Fetch data when the component mounts
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
   return (
     <BrowserRouter>
       <Navbar />
-      {/* {console.log(nData)} */}
-      <Body image={file} data={nData} />
-      <Footer1 onFileChange={handleFileChange} fetchData={fetchData} />
-      <Rightbar />
+      {console.log(file)}
+      <Body image={file} data={nData} color={colors} />
+      <Footer1
+        onFileChange={handleFileChange}
+        fetchData={fetchData}
+        color={color}
+      />
     </BrowserRouter>
   );
 };

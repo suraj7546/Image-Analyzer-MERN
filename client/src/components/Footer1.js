@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import "./footer.css";
 
-const Footer1 = ({ onFileChange, fetchData }) => {
+const Footer1 = ({ onFileChange, fetchData, color }) => {
   const [file, setFile] = useState(null);
 
   const upload = async (e) => {
     e.preventDefault();
     onFileChange(file);
     fetchData();
+    color();
     let formData = new FormData();
     formData.append("ss", file);
     try {
@@ -16,7 +18,7 @@ const Footer1 = ({ onFileChange, fetchData }) => {
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log("Success ", response);
+      // console.log("Success ", response);
     } catch (error) {
       console.error("Error uploading file:", error);
     }

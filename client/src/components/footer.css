@@ -1,0 +1,31 @@
+.footer{
+    padding: 15px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 18rem 33rem 12rem;
+}
+.footer input{
+    grid-column: 2/3;
+    border: none;
+    border-radius: 2px;
+    
+    
+    
+}
+input::file-selector-button {
+    color: rgb(24, 24, 25);
+    background-color: #dcddde;
+    text-transform: capitalize;
+    height: 3rem;
+    border: none;
+    border-radius: 2px;
+}
+
+.footer button{
+    color: rgb(247, 247, 249);
+    background-color: #4285f4;
+    text-transform: capitalize;
+    height: 3rem;
+    border: none;
+    border-radius: 2px;
+}
