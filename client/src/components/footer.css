@@ -3,12 +3,12 @@
     padding: 15px;
     margin: 10px;
     display: grid;
-    grid-template-columns: 18rem 33rem 12rem;
+    grid-template-columns: 20px 0.2fr 33rem 12rem;
 }
 
 /* Styles for input elements inside .footer */
 .footer input {
-    grid-column: 2/3;
+    grid-column: 3/4;
     border: none;
     border-radius: 2px;
 }
@@ -33,4 +33,16 @@ input::file-selector-button {
     border: none;
     border-radius: 2px;
     cursor: pointer;
+}
+@media screen and (max-width: 1056px) {
+    .footer {
+        grid-template-columns: 20px 30rem 90px 1fr; /* Change the layout to 2 equal columns */
+        height: auto; /* Adjust the height to fit the content */
+        margin-top: 2rem; /* Reduce the top margin */
+    }
+    .footer input {
+        grid-column: 2/3;
+        border: none;
+        border-radius: 2px;
+    }
 }

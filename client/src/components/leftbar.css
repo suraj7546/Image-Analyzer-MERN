@@ -1,20 +1,19 @@
-.image-box{
-    max-height: 550px;
-    max-width: 450px;
-    box-shadow: 1px;
-    background-size: cover;
-
-    
-}
+.image-box {
+        height: 338px;
+        width: 450px;
+        box-shadow: 1px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+      }
 .image{
     box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
-    max-height: 550px;
+    max-height: 338px;
     max-width: 450px;
+    background-size:cover ;
     
 }
-.img{
-    box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4);
-    max-height: 550px;
-    max-width: 450px;
-    background-size: cover;
-}
+
+  
+ 

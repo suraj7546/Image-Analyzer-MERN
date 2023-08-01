@@ -2,8 +2,24 @@
     height: 33rem;
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: 20rem 1fr 1fr 20rem;
+    grid-template-columns: 20px 0.3fr 1fr 1fr 20px;
 }
 .left{
-    grid-column: 2/3;
+    grid-column: 3/4;
+}
+@media screen and (max-width: 550px) {
+    .body {
+        grid-template-rows: 1fr 1fr; /* Change the layout to 2 equal columns */
+        height: auto; /* Adjust the height to fit the content */
+        margin-top: 2rem; /* Reduce the top margin */
+    }
+    .left{
+        grid-row:1/2;
+    }
+    .right{
+        grid-row:2/3 ;
+        margin: 10px;
+    }
+
+    
 }

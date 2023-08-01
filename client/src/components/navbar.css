@@ -22,7 +22,7 @@
     
     height: 10rem;
     display: grid;
-    grid-template-columns: 20rem 1fr 20rem;
+    grid-template-columns: 10px 1fr 10px;
 }
 .list{
     grid-column: 2/3;
@@ -49,4 +49,14 @@
   padding-bottom: 20px;
   border-bottom:3px solid #4285f4;
   transition:ease-in
+}
+
+@media screen and (max-width: 768px) {
+  
+  
+  .list ul {
+    /* display: none; */
+  }
+ 
+  
 }
