@@ -1,17 +1,19 @@
-.footer{
+/* Styles for the .footer class */
+.footer {
     padding: 15px;
     margin: 10px;
     display: grid;
     grid-template-columns: 18rem 33rem 12rem;
 }
-.footer input{
+
+/* Styles for input elements inside .footer */
+.footer input {
     grid-column: 2/3;
     border: none;
     border-radius: 2px;
-    
-    
-    
 }
+
+/* Styles for the file selector button inside input elements */
 input::file-selector-button {
     color: rgb(24, 24, 25);
     background-color: #dcddde;
@@ -19,13 +21,16 @@ input::file-selector-button {
     height: 3rem;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
 
-.footer button{
+/* Styles for the button elements inside .footer */
+.footer button {
     color: rgb(247, 247, 249);
     background-color: #4285f4;
     text-transform: capitalize;
     height: 3rem;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
