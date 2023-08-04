@@ -1,4 +1,8 @@
-# Labellerr.com - Image Analyzer Web Application
+# Image Analyzer Web Application
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com?color=68B587&lines=Image+Analyzer!&center=true&size=30">
+  </a>
+</h1>
 
 This is a web application that implements the Image Analyzer feature for Labellerr.com, allowing users to upload images and receive an analysis report containing information such as image dimensions, dominant colors, and object recognition.
 
