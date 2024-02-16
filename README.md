@@ -62,6 +62,8 @@ Before running the application, make sure you have the following installed:
 
 # Video
 
-https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/d7f1af2b-1c59-4900-979d-47459850e46e
+https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/5c7f012d-f661-4aad-81ad-0b29ad7693dc
+
+
 
 
