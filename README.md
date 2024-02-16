@@ -55,3 +55,13 @@ Before running the application, make sure you have the following installed:
 - The application is a simple implementation and can be extended with additional features as per requirements.
 
 - For any issues or feedback, please feel free to open an issue on the GitHub repository.
+
+  ![Screenshot (18)](https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/5cec22f6-f350-41ea-9c57-3580c8ef4722)     ![Screenshot (19)](https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/1318e6d4-a108-4107-b41d-c2ec888f02d8)
+
+![Screenshot (20)](https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/f62b8b40-d235-44ef-a713-3767bdc7050f)
+
+# Video
+
+https://github.com/suraj7546/Image_Analyzer-MERN/assets/92979091/d7f1af2b-1c59-4900-979d-47459850e46e
+
+
